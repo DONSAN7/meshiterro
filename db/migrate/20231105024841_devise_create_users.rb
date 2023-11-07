@@ -4,9 +4,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
   def change
     create_table :users do |t|
       ## Database authenticatable
-      # ↓メールアドレス
+      # メールアドレス
       t.string :email,              null: false, default: ""
-      # ↓暗号化されたパスワード
+      # 暗号化されたパスワード
       t.string :encrypted_password, null: false, default: ""
 
       ## Recoverable
@@ -36,7 +36,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
 
       ## 名前を保存するカラム
       t.string :name
-      
+
       t.timestamps null: false
     end
 
